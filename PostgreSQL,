@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  postgresql:
+    image: postgres
+    container_name: postgresql
+    environment:
+      - POSTGRES_USER=izing
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
+    volumes:
+      - /data:/var/lib/postgresql/data
+    command: -d postgres
